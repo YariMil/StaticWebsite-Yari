@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/theme.js"></script>
+    <script defer src="scripts/counter.js"></script>
+</head>
+<body class="counter-page">
+    <div id="counterBubbles" aria-hidden="true"></div>
+    <header class="theme-toolbar">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark Mode</button>
+    </header>
+    <main class="counter-panel">
+        <h1>Click Counter</h1>
+        <p class="counter-value" aria-live="polite" aria-atomic="true"><span class="counter-label">Clicks</span> <span id="clickCount">0</span></p>
+        <button id="incrementButton" type="button">Add 1</button>
+        <p class="counter-hint">Muted colors shift gradually, with a noticeable change about every <span id="colorChangeClicks">75</span> clicks.</p>
+        <a class="counter-home" href="index.html">Back to home</a>
+    </main>
+</body>
+</html>

@@ -3,30 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Website</title>
+    <meta name="description" content="Welcome to Yari's Honors Topics website: a space to learn web design, explore a canvas game, and try an interactive click counter.">
+    <title>Home | Yari's Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/theme.js"></script>
     <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/counter.js"></script>
 </head>
-<body>
-    <section id="section1" class="page-section">
-        <h1>Welcome to Section 0</h1>
-        <p>Content for section 1 DOESN'T GO HERE. MUAHAHAHAHAHAHAHAHA<br>
-            This is my evil plan to erase Section 1 from existence >:D
-        </p>
-    </section>
-    
-    <section id="section2" class="page-section">
-        <h1>Welcome to Section 2</h1>
-        <p>Content for section 2 goes here.</p>
-    </section>
-    
-    <section id="section3" class="page-section">
-        <h1>Welcome to Section 3</h1>
-        <p>Content for section 3 goes here.</p>
-    </section>
-
-    <section id="counter" class="page-section">
-        <h1>Counter</h1>
-        <p>Count: <span id="count">0</span></p>
+<body class="home-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="counterBubbles" aria-hidden="true"></div>
+    <header class="home-header">
+        <a class="home-brand" href="index.html">Yari's Website<span>Honors Topics</span></a>
+        <nav class="home-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="#counter">Click Counter</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark Mode</button>
+    </header>
+    <main id="main">
+        <section class="welcome-banner" aria-labelledby="welcome-title">
+            <div class="home-container">
+                <p class="home-eyebrow">A little curiosity. A lot to explore.</p>
+                <h1 id="welcome-title">Welcome to my<br>corner of the web.</h1>
+                <p class="welcome-description">This is my Honors Topics project: a space to learn how websites work and bring ideas to life with HTML, CSS, and JavaScript. Try the click counter and explore what I'm building.</p>
+                <div class="welcome-actions">
+                    <a class="home-button home-button-light" href="#counter">Try the click counter</a>
+                </div>
+                <p class="welcome-note">Made to learn. Built to be explored.</p>
+            </div>
+        </section>
+        <section id="counter" class="home-counter-section" aria-labelledby="counter-title">
+            <div class="home-container home-counter-panel">
+                <div class="home-counter-intro">
+                    <p class="home-eyebrow">A small experiment</p>
+                    <h2 id="counter-title">Make every<br>click count.</h2>
+                    <p>Give the button a click and watch your total grow. Stay a while as the background slowly changes color.</p>
+                    <p class="home-storage-note">Your clicks are saved in this browser, so you can pick up where you left off.</p>
+                    <a class="home-text-link" href="counter.html">Open the full-screen counter</a>
+                </div>
+                <div class="home-counter-controls">
+                    <p class="counter-value" aria-live="polite" aria-atomic="true"><span class="counter-label">Your total clicks</span> <span id="clickCount">0</span></p>
+                    <button id="incrementButton" type="button">Add 1</button>
+                    <p class="home-counter-caption">One click. One more possibility.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="home-footer home-container">
+        <p>Yari's Website <span>· An Honors Topics project</span></p>
+        <p id="count">Welcome! Make yourself at home.</p>
+    </footer>
 </body>
 </html>

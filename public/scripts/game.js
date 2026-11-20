@@ -23,6 +23,7 @@ class Game {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         // Draw each shape
+        this.ctx.fillStyle = document.documentElement.dataset.theme === 'dark' ? '#e8edf4' : '#000';
         for (const shape of this.shapes) {
             this.ctx.fillRect(shape.x, shape.y, shape.width, shape.height);
         }
